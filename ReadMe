@@ -1,0 +1,33 @@
+BIKE PREDICTOR PROJECT:
+
+OVERVIEW:
+All data is scraped from www.procyclingstats.com using the 'requests' library to extract html code.
+The data can be broken down to three different levels: Rider, Race, Result
+For each rider - age, weight, height and eventually clustering groups are used
+For each race - profile (horizontal distance into race vs altitude) features (e.g. maximum gradient) taken in image form from procyclingstats
+                weather on the day, found using 'meteostat' library (requires knowing locations of start/finish, time of start/finish)
+                race rank/startlist quality
+                other features to be determined
+For each result - rider, race, team, finishing place, size of startlist, points, time gaps, etc
+
+ANALYSIS PROGRESS:
+in project 4, the code is used to take scraped data and then train one random forest model per rider.
+              these models are then used to predict other riders' performances, and the prediction error is used as a measure of 'similarity'
+              this similarity index is used to cluster riders into groups
+
+CODE DESCRIPTIONS:
+labelling.py defines functions relating to the manual steps involved in labelling race profiles (edge detection and scaling of profile image)
+scrapers.py defines functions relating to scraping of race data
+proj1_...py scripts relate to the initial data collection step - taking race profile images from procyclingstats and outputting a scaled set of altitude coordinates
+NOTE: LABEL_MAIN IS THE SCRIPT USED TO COLLECT ALL THE DATA INITIALLY, THE PROCESS WHICH TAKES MOST TIME, SO IT IS IN CONSTANT USE
+proj2_...py scripts relate to smoothing of the profile (to avoid compression affects from the image processing) and the first attempt at getting weather data (the library used did not return reliable data)
+                    some preliminary feature-selection was performed too - determining features that might be redundant when predicting rider performance or race outcome
+proj3_...py scripts relate to a more successful iteration of weather data collection, and some more feature selection
+proj4_...py scripts relate to the determination of rider clusters by similarity index (a process described in ANALYSIS PROGRESS)
+
+FUTURE WORK:
+For now, label_main.py is being used to collect race profiles, I process around 10 races a day at the moment.
+Then, a more streamlined and reliable weather-data retrieval process is being developed, and that will require some manual data-checking step, so will take time
+      more attempts to cluster the riders in different ways
+      train models on dataset that predict race outcome (time-gaps, group-sizes) and individual rider performance
+      look into what makes a good team going into a race
