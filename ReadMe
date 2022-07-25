@@ -14,6 +14,7 @@ ANALYSIS PROGRESS:
 in project 4, the code is used to take scraped data and then train one random forest model per rider.
               these models are then used to predict other riders' performances, and the prediction error is used as a measure of 'similarity'
               this similarity index is used to cluster riders into groups
+              when clusting in a 2D space, the groups can be plotted, and they seperate riders into intuatively sensical groups
 
 CODE DESCRIPTIONS:
 labelling.py defines functions relating to the manual steps involved in labelling race profiles (edge detection and scaling of profile image)
@@ -27,7 +28,7 @@ proj4_...py scripts relate to the determination of rider clusters by similarity 
 
 FUTURE WORK:
 For now, label_main.py is being used to collect race profiles, I process around 10 races a day at the moment.
-Then, a more streamlined and reliable weather-data retrieval process is being developed, and that will require some manual data-checking step, so will take time
+Then, a more streamlined and reliable weather-data retrieval process is being developed, and that will require some manual data-checking steps, so will take time
       more attempts to cluster the riders in different ways
       train models on dataset that predict race outcome (time-gaps, group-sizes) and individual rider performance
       look into what makes a good team going into a race
