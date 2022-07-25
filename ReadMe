@@ -11,6 +11,7 @@ For each race - profile (horizontal distance into race vs altitude) features (e.
 For each result - rider, race, team, finishing place, size of startlist, points, time gaps, etc
 
 ANALYSIS PROGRESS:
+So far, a basefile (saved on my Google Drive) has been formed with complete and verified data for 456 races. This will be expanded in due course.
 in project 4, the code is used to take scraped data and then train one random forest model per rider.
               these models are then used to predict other riders' performances, and the prediction error is used as a measure of 'similarity'
               this similarity index is used to cluster riders into groups
