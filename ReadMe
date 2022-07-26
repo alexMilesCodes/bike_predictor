@@ -14,7 +14,7 @@ ANALYSIS PROGRESS:
 So far, a basefile (saved on my Google Drive) has been formed with complete and verified data for 456 races. This will be expanded in due course.
 in project 4, the code is used to take scraped data and then train one random forest model per rider.
               these models are then used to predict other riders' performances, and the prediction error is used as a measure of 'similarity'
-              this similarity index is used to cluster riders into groups
+              this proxy similarity metric is used to cluster riders into groups
               when clusting in a 2D space, the groups can be plotted, and they seperate riders into intuatively sensical groups
 
 CODE DESCRIPTIONS:
