@@ -115,7 +115,7 @@ for race in range(len(races)):
                 for i in range(len(alt), 1650):
                     profiles[i].append('')
                 plt.plot(alt_x, alt)
-                plt.title('just exit this window to continue baby boo')
+                plt.title('exit this window to continue')
                 plt.show()
                 notes.append(input('enter notes to add for profile (type "delete" to remove): '))
                 if notes[len(notes)-1] != 'delete':
