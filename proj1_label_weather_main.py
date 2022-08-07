@@ -39,9 +39,7 @@ for i in
             except:
                 data2['dep_lat'] = [input('input dep_lat: ')]
                 data2['dep_long'] = [input('input dep_long: ')]
-            pee = data2['dep_lat']
-            poo = data2['dep_long']
-            print(f'dep: {pee}, {poo}')
+            print('dep:', data2['dep_lat'], data2['dep_long'])
             if input('type 0 to edit: ') == '0':
                 data2['dep_lat'] = [input('input dep_lat: ')]
                 data2['dep_long'] = [input('input dep_long: ')]
@@ -51,9 +49,7 @@ for i in
             except:
                 data2['arr_lat'] = [input('input arr_lat: ')]
                 data2['arr_long'] = [input('input arr_long: ')]
-            pee = data2['arr_lat']
-            poo = data2['arr_long']
-            print(f'arr: {pee}, {poo}')
+            print('arr:' data2['arr_lat'], data2['arr_long'])
             if input('type 0 to edit: ') == '0':
                 data2['arr_lat'] = [input('input arr_lat: ')]
                 data2['arr_long'] = [input('input arr_long: ')]
