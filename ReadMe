@@ -1,4 +1,6 @@
 BIKE PREDICTOR PROJECT:
+author: Alex Miles
+contact: alex.george.miles@ntlworld.com
 
 OVERVIEW:
 All data is scraped from www.procyclingstats.com using the 'requests' library to extract html code.
